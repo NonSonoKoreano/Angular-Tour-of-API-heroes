@@ -1,4 +1,5 @@
 # Tour
+The Angular Tour of heroes but with API generated heroes from https://randomuser.me/api/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
