@@ -1,0 +1,23 @@
+<!-- Dettagli eroe Cliccato -->
+
+<div *ngIf="hero">
+    <div class="jumbotron">
+  <h2>Dettagli Eroe Selezionato:</h2> 
+  <br> 
+    <h3> {{hero.name | titlecase}}</h3>
+    <img [src]="hero.capelliImg" style="height: 20px; width: 100px;"> 
+    <br>
+    <img *ngIf="hero.faceImg" [src]="hero.faceImg" style="height: 100px; width: 100px;"> 
+ 
+  <p><strong>ID: </strong> {{hero.id}}</p>
+  <p><strong>Sesso: </strong>{{hero.sesso | titlecase }} </p>
+  <p><strong>Luogo di Nascita: </strong>{{hero.bornCity  | titlecase}}, {{hero.bornState | titlecase}} </p>
+  <p [style.color]="hero.coloreHex"><strong>Costume: </strong>{{hero.capelli | titlecase}}</p>
+  
+   
+  
+   
+
+</div>
+</div>
+

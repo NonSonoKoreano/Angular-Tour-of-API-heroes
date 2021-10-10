@@ -1,0 +1,52 @@
+<!-- <h2>{{hero.name | uppercase}} Dettagli</h2>
+<div><span>id:</span>{{hero.id}}</div>
+<div><span>name:</span>{{hero.name}}</div> -->
+<div class="row">
+    
+
+
+<div class="col-md-4">
+   
+    <div class="jumbotron">
+
+<div > <h3>Vuoi Creare un Eroe? Nome: <br> {{newHero | titlecase}}</h3></div>
+<div>
+  <label>Digita il nome:
+    <input class="form-control" [(ngModel)]="newHero" placeholder="Nome">
+  </label>
+  <button class="btn btn-primary" (click)="createHero()">Crea Nuovo Eroe!</button>
+</div>
+<br>
+<button class="btn btn-primary" (click)="createRandomHero()">Crea Eroe Random!</button>
+
+</div>
+<div *ngIf="heroes != 0" class="jumbotron">
+    <h3>Eroi:</h3>
+    <ul class="list-group">
+        <li  class="list-group-item list-group-item-action" 
+        [class.active]="hero === selectedHero"
+         *ngFor="let hero of heroes" 
+         (click)="selezionaEroe(hero)"> <img *ngIf="hero.faceImg" [src]="hero.faceImg" style="height: 20px; width: 20px;"> &nbsp;<strong>{{hero.name | titlecase}}</strong><button class="btn btn-primary" (click)="cancellaEroe()">Elimina!</button></li>
+      </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+    
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+  </div>
+    
+    </div>
